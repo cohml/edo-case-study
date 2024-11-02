@@ -1,0 +1,15 @@
+name: edo-case-study
+dependencies:
+  - boto3
+  - matplotlib
+  - jupyter
+  - pandas
+  - pip
+  - pytest
+  - pytest-mock
+  - scipy
+  - scikit-learn
+  - sqlalchemy
+  - xgboost
+  - pip:
+    - .
