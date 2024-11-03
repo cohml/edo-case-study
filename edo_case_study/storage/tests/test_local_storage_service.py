@@ -102,14 +102,6 @@ def test_save_invalid_data_type(
         storage_service.save(data, path, data_type=invalid_data_type)
 
 
-def test_save_invalid_data_type_empty_string(storage_service, tmp_path):
-    """Test calling a method with an unsupported data type."""
-    data = {"key": "value"}
-    path = tmp_path / "test.pkl"
-    with pytest.raises(ValueError, match="Data type 'invalid' not recognized"):
-        storage_service.save(data, path, data_type="invalid")
-
-
 def test_save_dataframe_invalid_path(storage_service):
     """Test save with invalid path for a DataFrame."""
     data = pd.DataFrame({"col1": [1, 2]})
